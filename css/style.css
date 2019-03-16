@@ -1,0 +1,39 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.my-container, .my-container-fluid {
+    height: 50vh;
+    background-color: red;
+}
+
+.my-container-fluid {
+    background-color: green;
+}
+ */
+/* contener, wiersz, kolumna */
+/* offset pomija kolumny */
+
+
+.item {
+    height: 200px;
+    background: red;
+}
+
+.item:nth-of-type(2n) {
+    background: orange;
+}
+
+/* div {
+    outline: 1px solid red;
+} */
+
+[class^='col-sm-'] {  
+    outline: 1px solid green;
+}
+
+/* nawiasy [] to seektory atrybutów */
+
+
