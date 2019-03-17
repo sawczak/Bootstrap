@@ -1,100 +1,277 @@
+/* DroidSerif Italic - wszystkie teksty pochyłą czcionką
+• Montserrat - menu, nagłówki i buttony
+• RobotoSlab - pozostały tekst
+Kolory:
+• Niebiesko-błękitny - buttony, hover - #0ed8d6
+• Font - Nagłówki - #333333
+• Font - pozostały tekst - #777777
+• Tło sekcji portfolio - #f7f7f7
+• Ikony social media - #222222 */
+
 :root {
-    --font-base: 'Roboto Slab';
-    --font-decor: 'Montserrat';
-    --font-color-base: #777777;
-    --font-color-decor: #0ed8d6;
-    --font-color-title: #333333;
-    --portfolio-bg: #f7f7f7;
-    --icons-color: #222222;
-    --font-color-white: #ffffff;
+	--font-base: 'Roboto Slab';
+	--font-decor: 'Montserrat';
+	--font-color-base: #777;
+	--font-color-decor: #0ed8d6;
+	--font-color-title: #333;
+	--font-color-white: #fff;
+	--portfolio-bg: #f7f7f7;
+	--icons-color: #222;
 }
 
-/* gradient gdy się scrolluje */
 * {
-    scrollbar-width: thin;
-
+	scrollbar-width: thin;
 }
 
 html {
-    font-family: var(--font-base);
-    color: var(--font-color-base);
+	font-family: var(--font-base);
+	color: var(--font-color-base);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	color: var(--font-color-base);
 }
 
 .main-header {
-    color: var(--font-color-white);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-image: url(../img/header/pictures_on_the_wall.jpg);
-}
-
-.main-header h1 {
-    font-family: var(--font-base);
-    font-size: 4vw;
-    font-style: italic;
-}
-
-.main-header h2 {
-    font-size: 5vw;
-    font-weight: 700;
+	color: var(--font-color-white);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background: url(../img/header/pictures_on_the_wall.jpg) no-repeat center center / cover;
 }
 
 .main-header:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0, .4));
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.4));
 }
 
 .main-header__title-section {
-    position: relative;
-    z-index: 2;
+	max-width: 70%;
+	position: relative;
+	z-index: 2;
+}
+
+.main-header h1 {
+	font-family: var(--font-base);
+	color: var(--font-color-white);
+	font-size: 4vw;
+	font-style: italic;
+}
+
+.main-header h2 {
+	color: var(--font-color-white);
+	font-size: 5vw;
+	font-weight: 700;
 }
 
 .link-btn {
-    font-family: var(--font-color-decor);
-    color: var(--font-color-white);
-    background-color: var(--font-color-decor);
-    font-size: 1.6rem;
-    line-height: 1;
-    display: inline-block;
-    padding: 16px 35px;
-    margin: 15px 0;
-    border-radius: 4px;
-    transition: all .3s ease-in;
-
+	font-family: var(--font-decor);
+	color: var(--font-color-white);
+	background: var(--font-color-decor);
+	font-size: 1.4rem;
+	line-height: 1;
+	display: inline-block;
+	padding: 16px 35px;
+	margin: 15px 0;
+	border-radius: 4px;
+	transition: all .3s ease-in;
 }
 
 .link-btn:hover {
-    color: var(--font-color-decor);
-    background-color: var(--font-color-white);
-    text-decoration: none;
+	color: var(--font-color-decor);
+	background: var(--font-color-white);
+	text-decoration: none;
 }
-.link.btn--border {
-    border: 1px solid var(--font-color-decor);
+
+.link-btn--border {
+	border: 1px solid var(--font-color-decor);
 }
 
 .navbar {
-    font-family: var(--font-color-decor);
-    background: none;
+	font-family: var(--font-decor);
+	background: none;
 }
 
-.navbar .navbar-brand,
+.navbar .navbar-brand, 
 .navbar .navbar-nav .nav-link {
-    color: var(--font-color-white);
-    transition: all .3s;
+	color: var(--font-color-white);
+	transition: all .3s;
 }
 
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link:hover {
-    color: var(--font-color-decor);
+	color: var(--font-color-decor);
+}
+
+.navbar .navbar-brand {
+	font-family: var(--font-base);
+	font-size: 2rem;
 }
 
 .navbar .navbar-brand:hover {
-    color: inherit;
+	color: var(--font-color-white);
+}
+
+#nav.scroll {
+    background: rgba(14,216,214,.8);
+}
+
+.page-section {
+	padding: 10vh 0;
+}
+
+.page-section--decor {
+    background: var(--portfolio-bg);
+}
+
+.section-title {
+	max-width: 95%;
+	margin: 20px auto 70px;
+	text-align: center;
+}
+
+.section-title h2 {
+	color: var(--font-color-title);
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.section-title h3 {
+	font-family: var(--font-base);
+	font-style: italic;
+	font-size: 1rem;
+	margin: 25px 0;
+}
+
+.service {
+	text-align: center;
+}
+
+/* @TODO sprawdź animację ikony */
+.service__icon {
+	color: var(--font-color-white);
+    background: var(--font-color-decor);
+    border: 1px solid var(--font-color-decor);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	width: 100px;
+	height: 100px;
+	margin: 15px auto;
+	border-radius: 50%;
+    transition: all .2s;
+}
+
+.service__icon:hover {
+	color: var(--font-color-decor);
+	background: var(--font-color-white);
+}
+
+.service__icon i {
+    transition: all .2s;
+}
+
+.service__icon:hover i {
+	transform: rotate(360deg);
+}
+
+.service__title {
+    font-size: 1.3rem;
+    color: black;
+}
+
+.service__description {
+    font-size: .9rem;
+}
+
+
+/* portfolio */
+
+.portfolio {
+    background: var(--font-color-white);
+    position: relative;
+}
+
+.portfolio a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+.portfolio__media {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio__image,
+.portfolio__mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    background: url(../img/portfolio/chestnut_on_bracket.jpg) no-repeat center / cover;
+    transition: all .3s;
+   /* skrótowa wersja
+    background-image: ....
+    background-repeat: ....
+    background-position: ....
+    / bo pozniej doszło bg-size = background-size: .... */
+}
+
+#image-2 {
+    background-image: url(../img/portfolio/house_with_blue_doors.jpg);
+}
+
+#image-3 {
+    background-image: url(../img/portfolio/box_of_cookies.jpg);
+}
+
+/* blokowych nie wstawiamy w liniowe divy w linki */
+
+/* zdj się powiększa po najechaniu */
+.portfolio:hover .portfolio__image {
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+.portfolio__mask {
+    background: rgba(14,216,214,.8);
+    z-index: 2;
+    color: var(--font-color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    transition: all .3s;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.7);
+}
+
+.portfolio:hover .portfolio__mask {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+.portfolio__details {
+    padding: 20px;
+    font-size: .9rem;
+    text-align: center;
+}
+
+.portfolio__title {
+    font-size: 1.2rem;
+    color: black;
 }
