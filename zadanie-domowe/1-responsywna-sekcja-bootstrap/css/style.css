@@ -1,0 +1,47 @@
+:root {
+	--font-base: 'Calibri';
+	--font-color-base: #b8a9a9;
+	--font-color-decor: #f8f8f8;
+	--font-color-orange: orange;
+}
+
+h2 {
+	padding-top: 60px;
+}
+
+h2, h4 {
+	color: var(--font-color-base);
+	font-family: var(--font-base);
+}
+
+hr {
+	width: 20%;
+}
+
+.service {
+	text-align: center;
+}
+
+.service__icon {
+	color: var(--font-color-orange);
+    background: var(--font-color-decor);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	width: 100px;
+	height: 100px;
+	margin: 20px auto;
+	border-radius: 50%;
+}
+
+.service__icon:hover {
+	color: var(--font-color-decor);
+	background: var(--font-color-orange);
+}
+
+.service__title {
+    font-size: .9rem;
+    color: var(--font-color-base);
+}
+
