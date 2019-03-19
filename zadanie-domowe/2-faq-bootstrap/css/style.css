@@ -1,0 +1,16 @@
+h2 {
+	padding-top: 60px;
+	color: #777;
+}
+
+hr {
+	width: 20%;
+}
+
+.accordion {
+	text-align: center;
+}
+
+button:hover{
+	cursor: pointer;
+}
